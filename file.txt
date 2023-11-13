@@ -1,0 +1,30 @@
+Step 1: Create a variable to hold the first set of elements
+var firstSet = [/* elements in the first set */];
+
+Step 2: Create a variable to hold the second set of elements
+var secondSet = [/* elements in the second set */];
+
+ Step 3: Traverse through the first set, checking elements that are inside the first but not in the second set
+for (var element in firstSet) {
+    if (!(element in secondSet)) {
+    Process or store the element as needed
+    }
+}
+
+Step 4: Traverse through the second set, checking elements that are inside the second but not in the first set
+for (var element in secondSet) {
+    if (!(element in firstSet)) {
+     Process or store the element as needed
+    }
+}
+
+Step 5: Create a variable called sum
+var sum = 0;
+
+Step 6: Add all the distinct elements and store in the sum variable
+var distinctElements = [...new Set([...firstSet, ...secondSet])];
+for (var element in distinctElements) {
+    sum += element;
+}
+
+Step 7: Print the result
